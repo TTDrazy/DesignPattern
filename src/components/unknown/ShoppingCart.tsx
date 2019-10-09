@@ -3,7 +3,10 @@ import App from "../../App";
 import { InputNumber, Select, Button } from "antd";
 
 //需要 单价 数量 折扣 总价
-interface IShoppingCartProps {}
+interface IShoppingCartProps {
+    singlePrice:number;
+    amount:number;
+}
 interface IShoppingCartState {
     singlePrice: number;
     amount: number;
@@ -20,8 +23,14 @@ export default class ShoppingCart extends React.Component<
             singlePrice: 199.99,
             amount: 1,
             discount: '9.5折',
-            total: 199.99
+            total: 0
         };
+    }
+    componentDidMount(){
+        this.setState({
+            singlePrice:this.props.singlePrice,
+            amount:this.props.amount
+        })
     }
     onChange = (value: number | undefined) => {
         this.setState({
@@ -61,6 +70,7 @@ export default class ShoppingCart extends React.Component<
                 discount = '9.5折';
             }
         }
+        total = Math.floor(total * 100) / 100 
         this.setState({
             discount,
             total
@@ -70,15 +80,13 @@ export default class ShoppingCart extends React.Component<
         const { Option } = Select;
         const { singlePrice, amount, discount, total } = this.state;    
         return (
-            <App>
-                <h2 style={{ textAlign: "left" }}>购物车案例</h2>
-                <br></br>
-                <br></br>
+            <div style={{float:'left',marginRight:'30px'}}>
+                <h4 style={{ textAlign: "center" }}>{this.props.children}</h4>
                 单价：
                 <InputNumber
                     name="singlePrice"
                     disabled
-                    defaultValue={singlePrice}
+                    value={singlePrice}
                     formatter={value =>
                         `￥ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                     }
@@ -91,7 +99,7 @@ export default class ShoppingCart extends React.Component<
                     name="amount"
                     min={1}
                     max={999}
-                    defaultValue={amount}
+                    value={amount}
                     onChange={this.onChange}
                 />
                 <br></br>
@@ -119,7 +127,7 @@ export default class ShoppingCart extends React.Component<
                     <span>￥</span>
                     <span>{total}</span>
                 </div>
-            </App>
+            </div>
         );
     }
 }
