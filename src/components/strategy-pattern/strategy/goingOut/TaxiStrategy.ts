@@ -1,10 +1,20 @@
 import { IGoPayStrategy } from './IGoPayStrategy';
 export default class TaxiStrategy implements IGoPayStrategy{
+    startKil:number;
+    startPrice:number;
+    addMoneyOneKil:number;
+
+    constructor(startKil:number,startPrice:number, addMoneyOneKil:number){
+        this.startKil = startKil;
+        this.startPrice = startPrice;
+        this.addMoneyOneKil = addMoneyOneKil;
+    }
+
     calculate(kilometre: number): number {
-       if(kilometre <= 3){
-            return 11;
+       if(kilometre <= this.startKil){
+            return this.startPrice;
        }else{
-           return 11+(kilometre-3)*4.5;
+           return this.startPrice+(kilometre-this.startKil)*this.addMoneyOneKil;
        }
     }
        

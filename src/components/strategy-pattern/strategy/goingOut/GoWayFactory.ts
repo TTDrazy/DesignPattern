@@ -8,13 +8,13 @@ export default class GoWayFactory {
         let context: Context;
         switch (goWay) {
             case "公交车":
-                context = new Context(new BusStrategy());
+                context = new Context(new BusStrategy(2));
                 break;
             case "自行车":
-                context = new Context(new BicycleStrategy());
+                context = new Context(new BicycleStrategy(0));
                 break;
             case "出租车":
-                context = new Context(new TaxiStrategy());
+                context = new Context(new TaxiStrategy(3,11,4.5));
                 break;
             default:
                 break;
