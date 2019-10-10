@@ -1,5 +1,5 @@
 import { IGoPayStrategy } from './IGoPayStrategy';
-export default class BusStrategy implements IGoPayStrategy{
+export default class OncePayStrategy implements IGoPayStrategy{
     priceOneTime:number;
 
     constructor(priceOneTime:number){

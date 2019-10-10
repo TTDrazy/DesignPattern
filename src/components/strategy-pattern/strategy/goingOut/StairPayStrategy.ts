@@ -1,5 +1,5 @@
 import { IGoPayStrategy } from './IGoPayStrategy';
-export default class TaxiStrategy implements IGoPayStrategy{
+export default class StairPayStrategy implements IGoPayStrategy{
     startKil:number;
     startPrice:number;
     addMoneyOneKil:number;
