@@ -4,6 +4,8 @@ import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import { Link } from "react-router-dom";
 export interface IAppProps {}
 
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
 class App extends React.Component<IAppProps> {
     state = {
         collapsed: false
@@ -13,8 +15,6 @@ class App extends React.Component<IAppProps> {
     };
 
     public render() {
-        const { Header, Content, Footer, Sider } = Layout;
-        const { SubMenu } = Menu;
         return (
             <Layout style={{ minHeight: "100vh" }}>
                 <Sider
@@ -34,7 +34,29 @@ class App extends React.Component<IAppProps> {
                                 <span>简单工厂</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="2">
+                        <SubMenu
+                            key="2"
+                            title={
+                                <Link to="/strategy">
+                                    <Icon type="ordered-list" />
+                                    <span>策略模式</span>
+                                </Link>
+                            }
+                        >
+                            <Menu.Item key="2.1">
+                                <Link to="/strategy/old">
+                                    <Icon type="fall" />
+                                    <span>旧版</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="2.2">
+                                <Link to="/strategy">
+                                    <Icon type="rise" />
+                                    <span>新版</span>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
+                        <Menu.Item key="3">
                             <Link to="/unknown">
                                 <Icon type="question" />
                                 <span>未知</span>

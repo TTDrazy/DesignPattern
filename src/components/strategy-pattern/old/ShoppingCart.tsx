@@ -1,5 +1,4 @@
 import * as React from "react";
-import App from "../../App";
 import { InputNumber, Select, Button } from "antd";
 
 //需要 单价 数量 折扣 总价
@@ -45,30 +44,14 @@ export default class ShoppingCart extends React.Component<
     getTotal = () => {
         let { singlePrice, amount, discount, total } = this.state;
         const originalPrice = singlePrice * amount;
-        if (originalPrice >= 500) {
-            if (originalPrice - 80 < originalPrice * 0.95) {
-                total = originalPrice - 80;
-                discount = '满500-80元';
-            } else {
-                total = originalPrice * 0.95;
-                discount = '9.5折';
-            }
-        } else if (originalPrice >= 200) {
-            if (originalPrice - 30 < originalPrice * 0.95) {
-                total = originalPrice - 30;
-                discount = '满200-30元';
-            } else {
-                total = originalPrice * 0.95;
-                discount = '9.5折';
-            }
-        } else if (originalPrice >= 100) {
-            if (originalPrice - 10 < originalPrice * 0.95) {
-                total = originalPrice - 10;
-                discount = '满100-10元';
-            } else {
-                total = originalPrice * 0.95;
-                discount = '9.5折';
-            }
+        if(discount === '9.5折'){
+            total = originalPrice * 0.95;
+        }else if(discount === '满100-10元' && originalPrice >= 100){
+            total = originalPrice -10;
+        }else if(discount === '满200-30元' && originalPrice >= 200){
+            total = originalPrice -30;
+        }else if(discount === '满500-80元' && originalPrice >= 500){
+            total = originalPrice -80;
         }
         total = Math.floor(total * 100) / 100 
         this.setState({
@@ -82,13 +65,12 @@ export default class ShoppingCart extends React.Component<
         return (
             <div style={{float:'left',marginRight:'30px'}}>
                 <h4 style={{ textAlign: "center" }}>{this.props.children}</h4>
-                单价：
+                单价：￥
                 <InputNumber
                     name="singlePrice"
-                    disabled
                     value={singlePrice}
                     formatter={value =>
-                        `￥ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                        ` ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                     }
                     parser={(value: any) => value.replace(/\$\s?|(,*)/g, "")}
                 />
@@ -118,7 +100,7 @@ export default class ShoppingCart extends React.Component<
                 <br></br>
                 <br></br>
                 <Button type="primary" onClick={this.getTotal}>
-                    计算最优折扣
+                    计算折扣
                 </Button>
                 <br></br>
                 <br></br>

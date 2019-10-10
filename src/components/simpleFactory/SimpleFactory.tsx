@@ -1,5 +1,4 @@
 import * as React from "react";
-import App from "../../App";
 import { Input, Select, Button } from "antd";
 import CalculateFactory from "./CalculateFactory";
 
@@ -52,7 +51,7 @@ export default class SimpleFactory extends React.Component<{}, IState> {
         const { Option } = Select;
         const { number1, number2, result, operator } = this.state;
         return (
-            <App>
+            <>
                 <h2 style={{textAlign:'left'}}>计算器案例</h2>
                 <br></br>
                 <br></br>
@@ -86,7 +85,7 @@ export default class SimpleFactory extends React.Component<{}, IState> {
                 <Button type="primary" onClick={this.calculate}>
                     计算
                 </Button>
-            </App>
+            </>
         );
     }
 }
