@@ -56,6 +56,35 @@ class App extends React.Component<IAppProps> {
                                 </Link>
                             </Menu.Item>
                         </SubMenu>
+                        <SubMenu
+                            key="2"
+                            title={
+                                <Link to="/strategy">
+                                    <Icon type="border-outer" />
+                                    <span>装饰器模式</span>
+                                </Link>
+                            }
+                        >
+                            <Menu.Item key="3.1">
+                                <Link to="/decorator/old">
+                                    <Icon type="fall" />
+                                    <span>旧版</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="3.2">
+                                <Link to="/decorator">
+                                    <Icon type="rise" />
+                                    <span>新版</span>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
+                        <Menu.Item key="4">
+                            <Link to="/prototype">
+                            <Icon type="import" />
+                                <span>原型模式</span>
+                            </Link>
+                        </Menu.Item>
+                        
                         <Menu.Item key="3">
                             <Link to="/unknown">
                                 <Icon type="question" />

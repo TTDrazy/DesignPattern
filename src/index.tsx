@@ -7,8 +7,9 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 import SimpleFactory from "./components/simpleFactory/SimpleFactory";
 import Goods from "./components/strategy-pattern/old/Goods";
 import StrategyIndex from './components/strategy-pattern/strategy/StrategyIndex';
-import WearClothesIndex from './components/unknown/wearClothes/WearClothesIndex';
-
+import WearClothesIndex from './components/decorator-pattern/old/WearClothesIndex';
+import WearClothesDecorate from "./components/decorator-pattern/decorate/WearClothesDecorate";
+import PrototypeIndex from './components/prototype-pattern/PrototypeIndex';
 
 ReactDOM.render(
     <Router>
@@ -21,7 +22,9 @@ ReactDOM.render(
             ></Route>
             <Route exact path="/strategy/old" component={Goods}></Route>
             <Route exact path="/strategy" component={StrategyIndex}></Route>
-            <Route exact path="/unknown" component={WearClothesIndex}></Route>
+            <Route exact path="/decorator/old" component={WearClothesIndex}></Route>
+            <Route exact path="/decorator" component = {WearClothesDecorate}></Route>
+            <Route exact path="/prototype" component = {PrototypeIndex}></Route>
         </App>
     </Router>,
     document.getElementById("root")
