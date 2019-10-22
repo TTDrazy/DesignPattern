@@ -10,6 +10,7 @@ import StrategyIndex from './components/strategy-pattern/strategy/StrategyIndex'
 import WearClothesIndex from './components/decorator-pattern/old/WearClothesIndex';
 import WearClothesDecorate from "./components/decorator-pattern/decorate/WearClothesDecorate";
 import PrototypeIndex from './components/prototype-pattern/PrototypeIndex';
+import SingletonIndex from './components/singleton-pattern/singleton/SingletonIndex';
 
 ReactDOM.render(
     <Router>
@@ -22,9 +23,10 @@ ReactDOM.render(
             ></Route>
             <Route exact path="/strategy/old" component={Goods}></Route>
             <Route exact path="/strategy" component={StrategyIndex}></Route>
+            <Route exact path="/prototype" component = {PrototypeIndex}></Route>
             <Route exact path="/decorator/old" component={WearClothesIndex}></Route>
             <Route exact path="/decorator" component = {WearClothesDecorate}></Route>
-            <Route exact path="/prototype" component = {PrototypeIndex}></Route>
+            <Route exact path="/singleton" component={SingletonIndex}></Route>
         </App>
     </Router>,
     document.getElementById("root")

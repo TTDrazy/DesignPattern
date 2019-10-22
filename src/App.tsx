@@ -57,11 +57,11 @@ class App extends React.Component<IAppProps> {
                             </Menu.Item>
                         </SubMenu>
                         <SubMenu
-                            key="2"
+                            key="3"
                             title={
                                 <Link to="/strategy">
                                     <Icon type="border-outer" />
-                                    <span>装饰器模式</span>
+                                    <span>装饰模式</span>
                                 </Link>
                             }
                         >
@@ -84,8 +84,13 @@ class App extends React.Component<IAppProps> {
                                 <span>原型模式</span>
                             </Link>
                         </Menu.Item>
-                        
-                        <Menu.Item key="3">
+                        <Menu.Item key="5">
+                            <Link to="/singleton">
+                            <Icon type="minus" />
+                                    <span>单例模式</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="24">
                             <Link to="/unknown">
                                 <Icon type="question" />
                                 <span>未知</span>
