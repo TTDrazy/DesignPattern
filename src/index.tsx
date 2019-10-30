@@ -11,6 +11,7 @@ import WearClothesIndex from './components/decorator-pattern/old/WearClothesInde
 import WearClothesDecorate from "./components/decorator-pattern/decorate/WearClothesDecorate";
 import PrototypeIndex from './components/prototype-pattern/PrototypeIndex';
 import SingletonIndex from './components/singleton-pattern/singleton/SingletonIndex';
+import ObserverIndex from './components/observer-pattern/ObserverIndex';
 
 ReactDOM.render(
     <Router>
@@ -27,6 +28,7 @@ ReactDOM.render(
             <Route exact path="/decorator/old" component={WearClothesIndex}></Route>
             <Route exact path="/decorator" component = {WearClothesDecorate}></Route>
             <Route exact path="/singleton" component={SingletonIndex}></Route>
+            <Route exact path="/observer" component={ObserverIndex}></Route>
         </App>
     </Router>,
     document.getElementById("root")

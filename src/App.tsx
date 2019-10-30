@@ -90,6 +90,12 @@ class App extends React.Component<IAppProps> {
                                     <span>单例模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key="6">
+                            <Link to="/observer">
+                            <Icon type="eye" />
+                                    <span>观察者模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown">
                                 <Icon type="question" />
