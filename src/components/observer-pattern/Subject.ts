@@ -6,7 +6,7 @@ export default class Subject {
     //订阅者队列
     private observers: Observer[] = [];
     //订阅状态
-    private state!: string;
+    private state: string | undefined;
 
     //新增订阅者
     addSubscribe(observer: Observer) {
@@ -34,7 +34,7 @@ export default class Subject {
     }
 
     //获取状态
-    getState(): string {
+    getState(): string | undefined {
         return this.state;
     }
 

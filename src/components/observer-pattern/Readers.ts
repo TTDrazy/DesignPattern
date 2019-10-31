@@ -14,6 +14,8 @@ export default class Reader extends Observer{
 
     update(){
         console.log(this.userName+'您订阅的漫画更新啦！');
-        console.log(this.subject.getState());
+        if(!!this.subject){
+            console.log(this.subject.getState());
+        }
     }
 }
