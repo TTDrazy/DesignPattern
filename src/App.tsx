@@ -59,7 +59,7 @@ class App extends React.Component<IAppProps> {
                         <SubMenu
                             key="3"
                             title={
-                                <Link to="/strategy">
+                                <Link to="/decorator">
                                     <Icon type="border-outer" />
                                     <span>装饰模式</span>
                                 </Link>
@@ -80,22 +80,44 @@ class App extends React.Component<IAppProps> {
                         </SubMenu>
                         <Menu.Item key="4">
                             <Link to="/prototype">
-                            <Icon type="import" />
+                                <Icon type="import" />
                                 <span>原型模式</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="5">
                             <Link to="/singleton">
-                            <Icon type="minus" />
-                                    <span>单例模式</span>
+                                <Icon type="minus" />
+                                <span>单例模式</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="6">
                             <Link to="/observer">
-                            <Icon type="eye" />
-                                    <span>观察者模式</span>
+                                <Icon type="eye" />
+                                <span>观察者模式</span>
                             </Link>
                         </Menu.Item>
+                        <SubMenu
+                            key="7"
+                            title={
+                                <Link to="/chainOfResponsibility">
+                                    <Icon type="cluster" />
+                                    <span>责任链模式</span>
+                                </Link>
+                            }
+                        >
+                            <Menu.Item key="7.1">
+                                <Link to="/chainOfResponsibility/old">
+                                    <Icon type="fall" />
+                                    <span>旧版</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="7.2">
+                                <Link to="/chainOfResponsibility">
+                                    <Icon type="rise" />
+                                    <span>新版</span>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
                         <Menu.Item key="24">
                             <Link to="/unknown">
                                 <Icon type="question" />
