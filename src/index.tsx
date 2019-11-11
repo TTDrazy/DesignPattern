@@ -14,16 +14,13 @@ import SingletonIndex from './components/singleton-pattern/singleton/SingletonIn
 import ObserverIndex from './components/observer-pattern/ObserverIndex';
 import OldChainOfResponsibilityIndex from './components/chainOfResponsibility-pattern/old/OldChainOfResponsibilityIndex';
 import ChainOfResponsibility from './components/chainOfResponsibility-pattern/chainOfResponsibility/ChainOfResponsibilityIndex';
+import Index from './components/bridge-pattern/old/Index';
 
 ReactDOM.render(
     <Router>
         <App>
             <Route exact path="/"></Route>
-            <Route
-                exact
-                path="/simpleFactory"
-                component={SimpleFactory}
-            ></Route>
+            <Route exact path="/simpleFactory" component={SimpleFactory}></Route>
             <Route exact path="/strategy/old" component={Goods}></Route>
             <Route exact path="/strategy" component={StrategyIndex}></Route>
             <Route exact path="/prototype" component = {PrototypeIndex}></Route>
@@ -33,6 +30,9 @@ ReactDOM.render(
             <Route exact path="/observer" component={ObserverIndex}></Route>
             <Route exact path="/chainOfResponsibility/old" component={OldChainOfResponsibilityIndex}></Route>
             <Route exact path="/chainOfResponsibility" component = {ChainOfResponsibility}></Route>
+            <Route exact path="/bridge/old" component={Index}></Route>
+            <Route exact path="/bridge"></Route>
+            <Route exact path="/unknown"></Route>
         </App>
     </Router>,
     document.getElementById("root")

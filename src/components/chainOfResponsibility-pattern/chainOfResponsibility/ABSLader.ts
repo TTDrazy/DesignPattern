@@ -1,7 +1,8 @@
 import Request from './Request';
 
 //抽象 处理者（Handler)
-//定义一个处理请示的接口，需要包含可以设置后继处理者的方法和能够处理请求的抽象方法
+//定义一个处理请示的接口
+//需要包含可以设置后继处理者的方法和能够处理请求的抽象方法
 export default abstract class ABSLeader{
     //领导的姓名和职称
     name:string;
