@@ -4,9 +4,9 @@ import Android from "./Android";
 import Game from "./Game";
 import Application from "./Application";
 
-export interface IIndexProps {}
+export interface IBridgePattermIndexProps {}
 
-export default class Index extends React.Component<IIndexProps> {
+export default class BridgePattermIndex extends React.Component<IBridgePattermIndexProps> {
     componentDidMount() {
         //创建手机
         let iphoneX = new IOSphone("iphoneX");
@@ -24,12 +24,11 @@ export default class Index extends React.Component<IIndexProps> {
         meta30.addSoftware(QQMusic);
         iphone6.addSoftware(honourOfKing);
         iphone6.addSoftware(QQMusic);
-
     }
     public render() {
         return (
             <div>
-                <h2>旧版 手机安装软件案例</h2>
+                <h2>手机安装软件案例</h2>
                 <ul>
                     <li>手机有 iphonex meta30 iphone6</li>
                     <li>游戏有 王者荣耀（honourOfKing） </li>

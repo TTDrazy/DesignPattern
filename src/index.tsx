@@ -14,7 +14,7 @@ import SingletonIndex from './components/singleton-pattern/singleton/SingletonIn
 import ObserverIndex from './components/observer-pattern/ObserverIndex';
 import OldChainOfResponsibilityIndex from './components/chainOfResponsibility-pattern/old/OldChainOfResponsibilityIndex';
 import ChainOfResponsibility from './components/chainOfResponsibility-pattern/chainOfResponsibility/ChainOfResponsibilityIndex';
-import Index from './components/bridge-pattern/old/Index';
+import BridgePattermIndex from './components/bridge-pattern/BridgePattermIndex';
 
 ReactDOM.render(
     <Router>
@@ -30,8 +30,7 @@ ReactDOM.render(
             <Route exact path="/observer" component={ObserverIndex}></Route>
             <Route exact path="/chainOfResponsibility/old" component={OldChainOfResponsibilityIndex}></Route>
             <Route exact path="/chainOfResponsibility" component = {ChainOfResponsibility}></Route>
-            <Route exact path="/bridge/old" component={Index}></Route>
-            <Route exact path="/bridge"></Route>
+            <Route exact path="/bridge" component={BridgePattermIndex}></Route>
             <Route exact path="/unknown"></Route>
         </App>
     </Router>,

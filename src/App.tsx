@@ -118,28 +118,12 @@ class App extends React.Component<IAppProps> {
                                 </Link>
                             </Menu.Item>
                         </SubMenu>
-                        <SubMenu
-                            key="8"
-                            title={
-                                <Link to="/bridge">
-                                    <Icon type="column-width" />
-                                    <span>桥接模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="8.1">
-                                <Link to="/bridge/old">
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="8.2">
-                                <Link to="/chainOfRbridgeesponsibility">
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
+                        <Menu.Item key="8">
+                            <Link to="/bridge">
+                                <Icon type="column-width" />
+                                <span>桥接模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown">
                                 <Icon type="question" />
