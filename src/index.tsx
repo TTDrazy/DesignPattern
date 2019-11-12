@@ -15,6 +15,7 @@ import ObserverIndex from './components/observer-pattern/ObserverIndex';
 import OldChainOfResponsibilityIndex from './components/chainOfResponsibility-pattern/old/OldChainOfResponsibilityIndex';
 import ChainOfResponsibility from './components/chainOfResponsibility-pattern/chainOfResponsibility/ChainOfResponsibilityIndex';
 import BridgePattermIndex from './components/bridge-pattern/BridgePattermIndex';
+import Index from './components/unknown/Index';
 
 ReactDOM.render(
     <Router>
@@ -31,7 +32,7 @@ ReactDOM.render(
             <Route exact path="/chainOfResponsibility/old" component={OldChainOfResponsibilityIndex}></Route>
             <Route exact path="/chainOfResponsibility" component = {ChainOfResponsibility}></Route>
             <Route exact path="/bridge" component={BridgePattermIndex}></Route>
-            <Route exact path="/unknown"></Route>
+            <Route exact path="/unknown" component={Index}></Route>
         </App>
     </Router>,
     document.getElementById("root")
