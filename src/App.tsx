@@ -124,10 +124,32 @@ class App extends React.Component<IAppProps> {
                                 <span>桥接模式</span>
                             </Link>
                         </Menu.Item>
+                        <SubMenu
+                            key="9"
+                            title={
+                                <Link to="/command">
+                                    <Icon type="code" />
+                                    <span>命令模式</span>
+                                </Link>
+                            }
+                        >
+                            <Menu.Item key="9.1">
+                                <Link to="/command/old">
+                                    <Icon type="fall" />
+                                    <span>旧版</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="9.2">
+                                <Link to="/command">
+                                    <Icon type="rise" />
+                                    <span>新版</span>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
                         <Menu.Item key="24">
-                            <Link to="/unknown">
+                            <Link to="/unknown1">
                                 <Icon type="question" />
-                                <span>未知</span>
+                                <span>未知 1</span>
                             </Link>
                         </Menu.Item>
                     </Menu>

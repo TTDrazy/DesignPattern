@@ -2,10 +2,10 @@ import * as React from 'react';
 import Customer from './Customer';
 import FoodEnum from './FoodEnum';
 
-export interface IIndexProps {
+export interface IRestaurantIndexProps {
 }
 
-export default class Index extends React.Component<IIndexProps> {
+export default class RestaurantIndex extends React.Component<IRestaurantIndexProps> {
     componentDidMount(){
         let customer = new Customer();
         customer.orderDishes();
