@@ -9,6 +9,8 @@ export interface ICommandIndexProps {}
 
 export default class CommandIndex extends React.Component<ICommandIndexProps> {
     componentDidMount(){
+        //将行为请求和行为实现解耦(即：将点菜和厨师烹饪食物解耦)
+
         //营业前的准备
             //设置厨师
         let cook = new Cook();

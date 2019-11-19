@@ -1,5 +1,11 @@
 import Command from './Command';
+
+//请求者类（Invoker)
+//负责调用 Command 对象发起执行
+
+//服务员
 export default class Waiter{
+    //聚合了 Command
     private command:Command[];
     constructor(){
         this.command = [];

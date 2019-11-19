@@ -1,6 +1,7 @@
 import Cook from './Cook';
-//命令接口
+//命令抽象类（Command)
 //用来声明执行操作的接口
+
 export default abstract class Command{
     protected cook:Cook;
     //食物名称

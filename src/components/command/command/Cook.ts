@@ -1,3 +1,6 @@
+//接受者类（Receiver)
+//负责请求具体内容的执行
+
 //厨师
 export default class Cook{
     //烤羊肉
