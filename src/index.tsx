@@ -14,7 +14,7 @@ import SingletonIndex from './components/singleton-pattern/singleton/SingletonIn
 import ObserverIndex from './components/observer-pattern/ObserverIndex';
 import OldChainOfResponsibilityIndex from './components/chainOfResponsibility-pattern/old/OldChainOfResponsibilityIndex';
 import ChainOfResponsibility from './components/chainOfResponsibility-pattern/chainOfResponsibility/ChainOfResponsibilityIndex';
-import BridgePattermIndex from './components/bridge-pattern/BridgePattermIndex';
+import BridgePattermIndex from './components/bridge/BridgePattermIndex';
 import RestaurantIndex from './components/command/restaurant/RestaurantIndex';
 import GameIndex from './components/unknown/game/Index';
 import CommandIndex from './components/command/command/CommandIndex';
