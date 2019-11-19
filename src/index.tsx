@@ -11,7 +11,7 @@ import WearClothesIndex from './components/decorator/old/WearClothesIndex';
 import WearClothesDecorate from "./components/decorator/decorate/WearClothesDecorate";
 import PrototypeIndex from './components/prototype-pattern/PrototypeIndex';
 import SingletonIndex from './components/singleton-pattern/singleton/SingletonIndex';
-import ObserverIndex from './components/observer-pattern/ObserverIndex';
+import ObserverIndex from './components/observer/ObserverIndex';
 import OldChainOfResponsibilityIndex from './components/chainOfResponsibility/old/OldChainOfResponsibilityIndex';
 import ChainOfResponsibility from './components/chainOfResponsibility/chainOfResponsibility/ChainOfResponsibilityIndex';
 import BridgePattermIndex from './components/bridge/BridgePattermIndex';
