@@ -146,6 +146,28 @@ class App extends React.Component<IAppProps> {
                                 </Link>
                             </Menu.Item>
                         </SubMenu>
+                        <SubMenu
+                            key="10"
+                            title={
+                                <Link to="/memento">
+                                    <Icon type="container" />
+                                    <span>备忘录模式</span>
+                                </Link>
+                            }
+                        >
+                            <Menu.Item key="10.1">
+                                <Link to="/memento/old">
+                                    <Icon type="fall" />
+                                    <span>旧版</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="10.2">
+                                <Link to="/memento">
+                                    <Icon type="rise" />
+                                    <span>新版</span>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />

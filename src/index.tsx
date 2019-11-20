@@ -16,8 +16,9 @@ import OldChainOfResponsibilityIndex from './components/chainOfResponsibility/ol
 import ChainOfResponsibility from './components/chainOfResponsibility/chainOfResponsibility/ChainOfResponsibilityIndex';
 import BridgePattermIndex from './components/bridge/BridgePattermIndex';
 import RestaurantIndex from './components/command/restaurant/RestaurantIndex';
-import GameIndex from './components/unknown/game/Index';
+import GameIndex from './components/memento/game/GameIndex';
 import CommandIndex from './components/command/command/CommandIndex';
+import MenmentoIndex from './components/memento/memento/MenmentoIndex';
 
 
 ReactDOM.render(
@@ -37,7 +38,9 @@ ReactDOM.render(
             <Route exact path="/bridge" component={BridgePattermIndex}></Route>
             <Route exact path="/command/old" component={RestaurantIndex}></Route>
             <Route exact path="/command" component={CommandIndex}></Route>
-            <Route exact path="/unknown1" component={GameIndex}></Route>
+            <Route exact path="/memento/old" component={GameIndex}></Route>
+            <Route exact path="/memento" component={MenmentoIndex}></Route>
+            <Route exact path="/unknown1"></Route>
         </App>
     </Router>,
     document.getElementById("root")
