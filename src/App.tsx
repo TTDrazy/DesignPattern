@@ -31,7 +31,7 @@ class App extends React.Component<IAppProps> {
                         <Menu.Item key="1">
                             <Link to="/simpleFactory">
                                 <Icon type="shop" />
-                                <span>简单工厂</span>
+                                <span>简单工厂模式</span>
                             </Link>
                         </Menu.Item>
                         <SubMenu
@@ -168,6 +168,18 @@ class App extends React.Component<IAppProps> {
                                 </Link>
                             </Menu.Item>
                         </SubMenu>
+                        <Menu.Item key="11">
+                            <Link to="/factory">
+                                <Icon type="shop" />
+                                <span>工厂模式</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="12">
+                            <Link to="/abstractFactory">
+                                <Icon type="shop" />
+                                <span>抽象工厂模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />

@@ -19,6 +19,8 @@ import RestaurantIndex from './components/command/restaurant/RestaurantIndex';
 import GameIndex from './components/memento/game/GameIndex';
 import CommandIndex from './components/command/command/CommandIndex';
 import MenmentoIndex from './components/memento/memento/MenmentoIndex';
+import FactoryIndex from './components/factory/FactoryIndex';
+import AbstractFactoryIndex from './components/abstractFactory/AbstractFactoryIndex';
 
 
 ReactDOM.render(
@@ -40,6 +42,8 @@ ReactDOM.render(
             <Route exact path="/command" component={CommandIndex}></Route>
             <Route exact path="/memento/old" component={GameIndex}></Route>
             <Route exact path="/memento" component={MenmentoIndex}></Route>
+            <Route exact path="/factory" component={FactoryIndex}></Route>
+            <Route exact path="/abstractFactory" component={AbstractFactoryIndex}></Route>
             <Route exact path="/unknown1"></Route>
         </App>
     </Router>,
