@@ -6,22 +6,22 @@ import * as serviceWorker from "./serviceWorker";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import SimpleFactory from "./components/simpleFactory/SimpleFactory";
 import Goods from "./components/strategy/old/Goods";
-import StrategyIndex from './components/strategy/strategy/StrategyIndex';
-import WearClothesIndex from './components/decorator/old/WearClothesIndex';
+import StrategyIndex from "./components/strategy/strategy/StrategyIndex";
+import WearClothesIndex from "./components/decorator/old/WearClothesIndex";
 import WearClothesDecorate from "./components/decorator/decorate/WearClothesDecorate";
-import PrototypeIndex from './components/prototype/PrototypeIndex';
-import SingletonIndex from './components/singleton/singleton/SingletonIndex';
-import ObserverIndex from './components/observer/ObserverIndex';
-import OldChainOfResponsibilityIndex from './components/chainOfResponsibility/old/OldChainOfResponsibilityIndex';
-import ChainOfResponsibility from './components/chainOfResponsibility/chainOfResponsibility/ChainOfResponsibilityIndex';
-import BridgePattermIndex from './components/bridge/BridgePattermIndex';
-import RestaurantIndex from './components/command/restaurant/RestaurantIndex';
-import GameIndex from './components/memento/game/GameIndex';
-import CommandIndex from './components/command/command/CommandIndex';
-import MenmentoIndex from './components/memento/memento/MenmentoIndex';
-import FactoryIndex from './components/factory/FactoryIndex';
-import AbstractFactoryIndex from './components/abstractFactory/AbstractFactoryIndex';
-
+import PrototypeIndex from "./components/prototype/PrototypeIndex";
+import SingletonIndex from "./components/singleton/singleton/SingletonIndex";
+import ObserverIndex from "./components/observer/ObserverIndex";
+import OldChainOfResponsibilityIndex from "./components/chainOfResponsibility/old/OldChainOfResponsibilityIndex";
+import ChainOfResponsibility from "./components/chainOfResponsibility/chainOfResponsibility/ChainOfResponsibilityIndex";
+import BridgePattermIndex from "./components/bridge/BridgePattermIndex";
+import RestaurantIndex from "./components/command/restaurant/RestaurantIndex";
+import GameIndex from "./components/memento/game/GameIndex";
+import CommandIndex from "./components/command/command/CommandIndex";
+import MenmentoIndex from "./components/memento/memento/MenmentoIndex";
+import FactoryIndex from "./components/factory/FactoryIndex";
+import AbstractFactoryIndex from "./components/abstractFactory/AbstractFactoryIndex";
+import AdapterIndex from "./components/adapter/AdapterIndex";
 
 ReactDOM.render(
     <Router>
@@ -30,13 +30,13 @@ ReactDOM.render(
             <Route exact path="/simpleFactory" component={SimpleFactory}></Route>
             <Route exact path="/strategy/old" component={Goods}></Route>
             <Route exact path="/strategy" component={StrategyIndex}></Route>
-            <Route exact path="/prototype" component = {PrototypeIndex}></Route>
+            <Route exact path="/prototype" component={PrototypeIndex}></Route>
             <Route exact path="/decorator/old" component={WearClothesIndex}></Route>
-            <Route exact path="/decorator" component = {WearClothesDecorate}></Route>
+            <Route exact path="/decorator" component={WearClothesDecorate}></Route>
             <Route exact path="/singleton" component={SingletonIndex}></Route>
             <Route exact path="/observer" component={ObserverIndex}></Route>
             <Route exact path="/chainOfResponsibility/old" component={OldChainOfResponsibilityIndex}></Route>
-            <Route exact path="/chainOfResponsibility" component = {ChainOfResponsibility}></Route>
+            <Route exact path="/chainOfResponsibility" component={ChainOfResponsibility}></Route>
             <Route exact path="/bridge" component={BridgePattermIndex}></Route>
             <Route exact path="/command/old" component={RestaurantIndex}></Route>
             <Route exact path="/command" component={CommandIndex}></Route>
@@ -44,6 +44,7 @@ ReactDOM.render(
             <Route exact path="/memento" component={MenmentoIndex}></Route>
             <Route exact path="/factory" component={FactoryIndex}></Route>
             <Route exact path="/abstractFactory" component={AbstractFactoryIndex}></Route>
+            <Route exact path="/adapater" component={AdapterIndex}></Route>
             <Route exact path="/unknown1"></Route>
         </App>
     </Router>,

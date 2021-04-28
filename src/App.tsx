@@ -8,7 +8,7 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 class App extends React.Component<IAppProps> {
     state = {
-        collapsed: false
+        collapsed: false,
     };
     onCollapse = (collapsed: boolean) => {
         this.setState({ collapsed });
@@ -17,17 +17,9 @@ class App extends React.Component<IAppProps> {
     public render() {
         return (
             <Layout style={{ minHeight: "100vh" }}>
-                <Sider
-                    collapsible
-                    collapsed={this.state.collapsed}
-                    onCollapse={this.onCollapse}
-                >
+                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <div className="logo" />
-                    <Menu
-                        theme="dark"
-                        defaultSelectedKeys={["1"]}
-                        mode="inline"
-                    >
+                    <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
                         <Menu.Item key="1">
                             <Link to="/simpleFactory">
                                 <Icon type="shop" />
@@ -180,6 +172,12 @@ class App extends React.Component<IAppProps> {
                                 <span>抽象工厂模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key="adapater">
+                            <Link to="/adapater">
+                                <Icon type="api" />
+                                <span>适配器模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />
@@ -194,7 +192,7 @@ class App extends React.Component<IAppProps> {
                             background: "#fff",
                             padding: 0,
                             fontSize: "28px",
-                            textAlign: "center"
+                            textAlign: "center",
                         }}
                     >
                         设计模式
@@ -207,21 +205,13 @@ class App extends React.Component<IAppProps> {
                             style={{
                                 padding: 24,
                                 background: "#fff",
-                                minHeight: 360
+                                minHeight: 360,
                             }}
                         >
-                            {this.props.children ? (
-                                this.props.children
-                            ) : (
-                                <div style={{ textAlign: "center" }}>
-                                    欢迎学习设计模式
-                                </div>
-                            )}
+                            {this.props.children ? this.props.children : <div style={{ textAlign: "center" }}>欢迎学习设计模式</div>}
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: "center" }}>
-                        Design ©2019 Created by Drazy
-                    </Footer>
+                    <Footer style={{ textAlign: "center" }}>Design ©2019 Created by Drazy</Footer>
                 </Layout>
             </Layout>
         );
