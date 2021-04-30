@@ -22,8 +22,7 @@ import MenmentoIndex from "./components/memento/memento/MenmentoIndex";
 import FactoryIndex from "./components/factory/FactoryIndex";
 import AbstractFactoryIndex from "./components/abstractFactory/AbstractFactoryIndex";
 import AdapterIndex from "./components/adapter/AdapterIndex";
-import AgencyOldIndex from "./components/agency/new/AgencyIndex";
-import AgencyIndex from "./components/agency/old/AgencyOldIndex";
+import AgencyIndex from "./components/agency/AgencyIndex";
 
 ReactDOM.render(
     <Router>
@@ -47,7 +46,6 @@ ReactDOM.render(
             <Route exact path="/factory" component={FactoryIndex}></Route>
             <Route exact path="/abstractFactory" component={AbstractFactoryIndex}></Route>
             <Route exact path="/adapater" component={AdapterIndex}></Route>
-            <Route exact path="/agency/old" component={AgencyOldIndex}></Route>
             <Route exact path="/agency" component={AgencyIndex}></Route>
             <Route exact path="/unknown1"></Route>
         </App>

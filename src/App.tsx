@@ -178,28 +178,12 @@ class App extends React.Component<IAppProps> {
                                 <span>适配器模式</span>
                             </Link>
                         </Menu.Item>
-                        <SubMenu
-                            key="agency"
-                            title={
-                                <Link to="/agency">
-                                    <Icon type="block" />
-                                    <span>代理模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="agencyOld">
-                                <Link to="/agency/old">
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="agencyNew">
-                                <Link to="/agency">
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
+                        <Menu.Item key="agency">
+                            <Link to="/agency">
+                                <Icon type="api" />
+                                <span>代理模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />
