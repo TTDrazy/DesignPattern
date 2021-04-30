@@ -180,7 +180,7 @@ class App extends React.Component<IAppProps> {
                         </Menu.Item>
                         <Menu.Item key="agency">
                             <Link to="/agency">
-                                <Icon type="api" />
+                                <Icon type="block" />
                                 <span>代理模式</span>
                             </Link>
                         </Menu.Item>
