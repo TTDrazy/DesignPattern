@@ -184,6 +184,12 @@ class App extends React.Component<IAppProps> {
                                 <span>代理模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key="template">
+                            <Link to="/template">
+                                <Icon type="copy" />
+                                <span>模板模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />

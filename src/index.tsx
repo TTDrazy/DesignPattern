@@ -23,6 +23,7 @@ import FactoryIndex from "./components/factory/FactoryIndex";
 import AbstractFactoryIndex from "./components/abstractFactory/AbstractFactoryIndex";
 import AdapterIndex from "./components/adapter/AdapterIndex";
 import AgencyIndex from "./components/agency/AgencyIndex";
+import TemplateIndex from "./components/template/TemplateIndex";
 
 ReactDOM.render(
     <Router>
@@ -47,6 +48,7 @@ ReactDOM.render(
             <Route exact path="/abstractFactory" component={AbstractFactoryIndex}></Route>
             <Route exact path="/adapater" component={AdapterIndex}></Route>
             <Route exact path="/agency" component={AgencyIndex}></Route>
+            <Route exact path="/template" component={TemplateIndex}></Route>
             <Route exact path="/unknown1"></Route>
         </App>
     </Router>,
