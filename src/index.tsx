@@ -24,6 +24,7 @@ import AbstractFactoryIndex from "./components/abstractFactory/AbstractFactoryIn
 import AdapterIndex from "./components/adapter/AdapterIndex";
 import AgencyIndex from "./components/agency/AgencyIndex";
 import TemplateIndex from "./components/template/TemplateIndex";
+import FacadeIndex from "./components/facade/FacadeIndex";
 
 ReactDOM.render(
     <Router>
@@ -49,6 +50,7 @@ ReactDOM.render(
             <Route exact path="/adapater" component={AdapterIndex}></Route>
             <Route exact path="/agency" component={AgencyIndex}></Route>
             <Route exact path="/template" component={TemplateIndex}></Route>
+            <Route exact path="/facade" component={FacadeIndex}></Route>
             <Route exact path="/unknown1"></Route>
         </App>
     </Router>,

@@ -190,6 +190,12 @@ class App extends React.Component<IAppProps> {
                                 <span>模板模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key="facade">
+                            <Link to="/facade">
+                                <Icon type="skin" />
+                                <span>外观/门面模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="24">
                             <Link to="/unknown1">
                                 <Icon type="question" />
