@@ -25,33 +25,36 @@ import AdapterIndex from "./components/adapter/AdapterIndex";
 import AgencyIndex from "./components/agency/AgencyIndex";
 import TemplateIndex from "./components/template/TemplateIndex";
 import FacadeIndex from "./components/facade/FacadeIndex";
+import { RouterEnum } from "./router/RouterEnum";
+import BuilderIndex from "./components/builder/BuilderIndex";
 
 ReactDOM.render(
     <Router>
         <App>
             <Route exact path="/"></Route>
-            <Route exact path="/simpleFactory" component={SimpleFactory}></Route>
-            <Route exact path="/strategy/old" component={Goods}></Route>
-            <Route exact path="/strategy" component={StrategyIndex}></Route>
-            <Route exact path="/prototype" component={PrototypeIndex}></Route>
-            <Route exact path="/decorator/old" component={WearClothesIndex}></Route>
-            <Route exact path="/decorator" component={WearClothesDecorate}></Route>
-            <Route exact path="/singleton" component={SingletonIndex}></Route>
-            <Route exact path="/observer" component={ObserverIndex}></Route>
-            <Route exact path="/chainOfResponsibility/old" component={OldChainOfResponsibilityIndex}></Route>
-            <Route exact path="/chainOfResponsibility" component={ChainOfResponsibility}></Route>
-            <Route exact path="/bridge" component={BridgePattermIndex}></Route>
-            <Route exact path="/command/old" component={RestaurantIndex}></Route>
-            <Route exact path="/command" component={CommandIndex}></Route>
-            <Route exact path="/memento/old" component={GameIndex}></Route>
-            <Route exact path="/memento" component={MenmentoIndex}></Route>
-            <Route exact path="/factory" component={FactoryIndex}></Route>
-            <Route exact path="/abstractFactory" component={AbstractFactoryIndex}></Route>
-            <Route exact path="/adapater" component={AdapterIndex}></Route>
-            <Route exact path="/agency" component={AgencyIndex}></Route>
-            <Route exact path="/template" component={TemplateIndex}></Route>
-            <Route exact path="/facade" component={FacadeIndex}></Route>
-            <Route exact path="/unknown1"></Route>
+            <Route exact path={RouterEnum.simpleFactory} component={SimpleFactory}></Route>
+            <Route exact path={RouterEnum.strategy + "/old"} component={Goods}></Route>
+            <Route exact path={RouterEnum.strategy} component={StrategyIndex}></Route>
+            <Route exact path={RouterEnum.prototype} component={PrototypeIndex}></Route>
+            <Route exact path={RouterEnum.decorator + "/old"} component={WearClothesIndex}></Route>
+            <Route exact path={RouterEnum.decorator} component={WearClothesDecorate}></Route>
+            <Route exact path={RouterEnum.singleton} component={SingletonIndex}></Route>
+            <Route exact path={RouterEnum.observer} component={ObserverIndex}></Route>
+            <Route exact path={RouterEnum.chainOfResponsibility + "/old"} component={OldChainOfResponsibilityIndex}></Route>
+            <Route exact path={RouterEnum.chainOfResponsibility} component={ChainOfResponsibility}></Route>
+            <Route exact path={RouterEnum.bridge} component={BridgePattermIndex}></Route>
+            <Route exact path={RouterEnum.command + "/old"} component={RestaurantIndex}></Route>
+            <Route exact path={RouterEnum.command} component={CommandIndex}></Route>
+            <Route exact path={RouterEnum.memento + "/old"} component={GameIndex}></Route>
+            <Route exact path={RouterEnum.memento} component={MenmentoIndex}></Route>
+            <Route exact path={RouterEnum.factory} component={FactoryIndex}></Route>
+            <Route exact path={RouterEnum.abstractFactory} component={AbstractFactoryIndex}></Route>
+            <Route exact path={RouterEnum.adapater} component={AdapterIndex}></Route>
+            <Route exact path={RouterEnum.agency} component={AgencyIndex}></Route>
+            <Route exact path={RouterEnum.template} component={TemplateIndex}></Route>
+            <Route exact path={RouterEnum.facade} component={FacadeIndex}></Route>
+            <Route exact path={RouterEnum.builder} component={BuilderIndex}></Route>
+            <Route exact path={RouterEnum.unknown}></Route>
         </App>
     </Router>,
     document.getElementById("root")
