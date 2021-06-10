@@ -9,5 +9,5 @@ export default class BuilderIndex extends React.Component<IBuilderIndexProps> {
                 <h2>建造者设计模式（待学习）</h2>
             </div>
         );
-    }
+    } 
 }
