@@ -1,3 +1,10 @@
+<!--
+ * @Author: Drazy
+ * @Date: 2021-09-02 14:50:29
+ * @LastEditors: Drazy
+ * @LastEditTime: 2021-09-03 11:55:01
+ * @Description: Readme
+-->
 # 设计模式 案例集合
 
 #### 这是一个将 React 与 TypeScript 相结合去学习设计模式的过程
@@ -24,3 +31,4 @@
  14. 代理模式
  15. 模板方法模式
  16. 外观/门面模式
+ 17. 建造者模式
