@@ -1,3 +1,9 @@
+/*
+ * @Author: Drazy
+ * @Date: 2021-09-02 14:50:29
+ * @LastEditors: Drazy
+ * @LastEditTime: 2021-09-03 13:55:14
+ */
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -27,6 +33,7 @@ import TemplateIndex from "./components/template/TemplateIndex";
 import FacadeIndex from "./components/facade/FacadeIndex";
 import { RouterEnum } from "./router/RouterEnum";
 import BuilderIndex from "./components/builder/BuilderIndex";
+import CombinationIndex from './components/combination/CombinationIndex'
 
 ReactDOM.render(
     <Router>
@@ -54,6 +61,7 @@ ReactDOM.render(
             <Route exact path={RouterEnum.template} component={TemplateIndex}></Route>
             <Route exact path={RouterEnum.facade} component={FacadeIndex}></Route>
             <Route exact path={RouterEnum.builder} component={BuilderIndex}></Route>
+            <Route exact path={RouterEnum.combination} component={CombinationIndex}></Route>
             <Route exact path={RouterEnum.unknown}></Route>
         </App>
     </Router>,

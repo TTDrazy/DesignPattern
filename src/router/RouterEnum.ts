@@ -1,3 +1,9 @@
+/*
+ * @Author: Drazy
+ * @Date: 2021-09-02 14:50:29
+ * @LastEditors: Drazy
+ * @LastEditTime: 2021-09-03 13:44:01
+ */
 export enum RouterEnum {
     //简单工厂模式
     simpleFactory = "/simpleFactory",
@@ -33,6 +39,8 @@ export enum RouterEnum {
     facade = "/facade",
     //建造者模式
     builder = "/builder",
+    // 组合模式
+    combination = "/combination",
 
     //未知
     unknown = "/unknown",

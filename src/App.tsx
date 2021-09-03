@@ -3,7 +3,7 @@ import "./App.css";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import { Link } from "react-router-dom";
 import { RouterEnum } from "./router/RouterEnum";
-export interface IAppProps {}
+export interface IAppProps { }
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -201,6 +201,12 @@ class App extends React.Component<IAppProps> {
                             <Link to={RouterEnum.builder}>
                                 <Icon type="scissor" />
                                 <span>建造者模式</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key={RouterEnum.combination}>
+                            <Link to={RouterEnum.combination}>
+                                <Icon type="apartment" />
+                                <span>组合模式</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key={RouterEnum.unknown}>
