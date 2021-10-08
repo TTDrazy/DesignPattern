@@ -209,6 +209,12 @@ class App extends React.Component<IAppProps> {
                                 <span>组合模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key={RouterEnum.status}>
+                            <Link to={RouterEnum.status}>
+                                <Icon type="alert" />
+                                <span>状态模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key={RouterEnum.unknown}>
                             <Link to={RouterEnum.unknown}>
                                 <Icon type="question" />
