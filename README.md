@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2021-09-02 14:50:29
  * @LastEditors: Drazy
- * @LastEditTime: 2021-09-06 17:42:02
+ * @LastEditTime: 2021-10-12 09:10:06
  * @Description: Readme
 -->
 # 设计模式 案例集合
@@ -33,3 +33,4 @@
  16. 外观/门面模式
  17. 建造者模式
  18. 组合模式
+ 19. 状态模式
