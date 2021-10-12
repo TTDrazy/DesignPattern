@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2021-09-02 14:50:29
  * @LastEditors: Drazy
- * @LastEditTime: 2021-10-08 15:07:44
+ * @LastEditTime: 2021-10-12 16:03:50
  */
 export enum RouterEnum {
     //简单工厂模式
@@ -43,6 +43,8 @@ export enum RouterEnum {
     combination = "/combination",
     // 状态模式
     status = '/status',
+    // 迭代器模式
+    iterator = '/iterator',
 
     //未知
     unknown = "/unknown",

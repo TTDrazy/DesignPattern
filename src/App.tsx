@@ -215,6 +215,12 @@ class App extends React.Component<IAppProps> {
                                 <span>状态模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key={RouterEnum.iterator}>
+                            <Link to={RouterEnum.iterator}>
+                                <Icon type="retweet" />
+                                <span>迭代器模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key={RouterEnum.unknown}>
                             <Link to={RouterEnum.unknown}>
                                 <Icon type="question" />

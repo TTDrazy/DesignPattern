@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2021-09-02 14:50:29
  * @LastEditors: Drazy
- * @LastEditTime: 2021-10-08 15:10:14
+ * @LastEditTime: 2021-10-12 16:05:57
  */
 import React from "react";
 import ReactDOM from "react-dom";
@@ -35,6 +35,7 @@ import { RouterEnum } from "./router/RouterEnum";
 import BuilderIndex from "./components/builder/BuilderIndex";
 import CombinationIndex from './components/combination/CombinationIndex'
 import StatusIndex from './components/status/StatusIndex';
+import IteratorIndex from './components/iterator/IteratorIndex';
 
 ReactDOM.render(
     <Router>
@@ -64,6 +65,7 @@ ReactDOM.render(
             <Route exact path={RouterEnum.builder} component={BuilderIndex}></Route>
             <Route exact path={RouterEnum.combination} component={CombinationIndex}></Route>
             <Route exact path={RouterEnum.status} component={StatusIndex}></Route>
+            <Route exact path={RouterEnum.iterator} component={IteratorIndex}></Route>
             <Route exact path={RouterEnum.unknown}></Route>
         </App>
     </Router>,
