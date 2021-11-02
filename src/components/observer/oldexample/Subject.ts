@@ -40,7 +40,7 @@ export default class Subject {
 
     //发布消息
     publish() {
-        this.observers.map(item => {
+        this.observers.forEach(item => {
             //调用每个订阅者的更新方法
             item.update();
         });

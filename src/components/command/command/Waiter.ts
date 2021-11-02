@@ -23,7 +23,7 @@ export default class Waiter{
     }
     //通知执行
     notify(){
-        this.command.map((item)=>{
+        this.command.forEach((item)=>{
             item.cooking(item.number);
         })
     }

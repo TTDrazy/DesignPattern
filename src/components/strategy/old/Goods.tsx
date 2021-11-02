@@ -1,6 +1,5 @@
 import * as React from "react";
 import ShoppingCart from "./ShoppingCart";
-import App from "../../../App";
 
 interface IGoodsProps {}
 interface IGoodsState {}

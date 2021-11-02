@@ -34,7 +34,7 @@ export default class Waiter {
         console.log("服务员：我现在和您核对一下菜单");
         let foodList = this.order.getFoodList();
         console.log("您点了：");
-        foodList!.map(item => {
+        foodList.forEach(item => {
             console.log(item);
         });
         console.log("您还需要修改菜单吗？");

@@ -20,12 +20,12 @@ export default class SimpleFactory extends React.Component<{}, IState> {
         };
     }
     handleChangeInput = (e: any) => {
-        if (e.target.name == "number1") {
+        if (e.target.name === "number1") {
             this.setState({
                 //注意应该将 string 的数字强制类型转换为 number 类型
                 number1: Number(e.target.value)
             });
-        } else if (e.target.name == "number2") {
+        } else if (e.target.name === "number2") {
             this.setState({
                 number2: Number(e.target.value)
             });

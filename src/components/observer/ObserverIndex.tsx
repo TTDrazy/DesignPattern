@@ -10,9 +10,9 @@ export default class ObserverIndex extends React.Component<IObserverIndexProps> 
         //观察者模式又称 发布-订阅 模式
         let subject = new Subject();
         //新增订阅者
-        let user1 = new Reader(subject, "小明");
+        // let user1 = new Reader(subject, "小明");
         let user2 = new Reader(subject, "小花");
-        let user3 = new Reader(subject, "小宝");
+        // let user3 = new Reader(subject, "小宝");
         console.log("----------------------");
         //发布者状态改变，通知每位订阅者
         subject.notify("作者更新了第100章");

@@ -6,7 +6,7 @@ export default class Moon {
     private constructor() {}
     static getMoon(): Moon {
         console.log(this.specificMoon);
-        if (this.specificMoon == undefined) {
+        if (this.specificMoon === undefined) {
             this.specificMoon = new Moon();
         }
         return this.specificMoon;
