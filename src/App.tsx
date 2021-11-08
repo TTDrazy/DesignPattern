@@ -221,6 +221,12 @@ class App extends React.Component<IAppProps> {
                                 <span>迭代器模式</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key={RouterEnum.mediator}>
+                            <Link to={RouterEnum.mediator}>
+                                <Icon type="smile-o" />
+                                <span>中介者模式</span>
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key={RouterEnum.unknown}>
                             <Link to={RouterEnum.unknown}>
                                 <Icon type="question" />
