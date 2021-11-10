@@ -7,6 +7,209 @@ export interface IAppProps { }
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
+
+
+interface IMenuItem {
+    linkTo: RouterEnum,
+    Icon: string,
+    text: string
+}
+
+interface ISubMenu {
+    title: IMenuItem
+    menuItemList: IMenuItem[]
+}
+
+interface ISider {
+    isSubMenu: boolean,
+    linkTo?: RouterEnum,
+    Icon?: string,
+    text?: string
+    subMenu?: ISubMenu
+}
+
+const siderMenuList: ISider[] = [{
+    isSubMenu: false,
+    linkTo: RouterEnum.home,
+    Icon: 'home',
+    text: '介绍'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.simpleFactory,
+    Icon: 'shop',
+    text: '简单工厂模式'
+}, {
+    isSubMenu: true,
+    subMenu: {
+        title: {
+            linkTo: RouterEnum.strategy,
+            Icon: 'ordered-list',
+            text: '策略模式',
+        },
+        menuItemList: [{
+            linkTo: RouterEnum.oldstrategy,
+            Icon: 'fall',
+            text: '旧版',
+        }, {
+            linkTo: RouterEnum.strategy,
+            Icon: 'rise',
+            text: '新版',
+        }]
+    }
+}, {
+    isSubMenu: true,
+    subMenu: {
+        title: {
+            linkTo: RouterEnum.decorator,
+            Icon: 'border-outer',
+            text: '装饰模式',
+        },
+        menuItemList: [{
+            linkTo: RouterEnum.olddecorator,
+            Icon: 'fall',
+            text: '旧版',
+        }, {
+            linkTo: RouterEnum.decorator,
+            Icon: 'rise',
+            text: '新版',
+        }]
+    }
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.prototype,
+    Icon: 'import',
+    text: '原型模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.singleton,
+    Icon: 'minus',
+    text: '单例模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.observer,
+    Icon: 'eye',
+    text: '观察者模式'
+}, {
+    isSubMenu: true,
+    subMenu: {
+        title: {
+            linkTo: RouterEnum.chainOfResponsibility,
+            Icon: 'cluster',
+            text: '责任链模式',
+        },
+        menuItemList: [{
+            linkTo: RouterEnum.oldchainOfResponsibility,
+            Icon: 'fall',
+            text: '旧版',
+        }, {
+            linkTo: RouterEnum.chainOfResponsibility,
+            Icon: 'rise',
+            text: '新版',
+        }]
+    }
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.bridge,
+    Icon: 'column-width',
+    text: '桥接模式'
+}, {
+    isSubMenu: true,
+    subMenu: {
+        title: {
+            linkTo: RouterEnum.command,
+            Icon: 'code',
+            text: '命令模式',
+        },
+        menuItemList: [{
+            linkTo: RouterEnum.oldcommand,
+            Icon: 'fall',
+            text: '旧版',
+        }, {
+            linkTo: RouterEnum.command,
+            Icon: 'rise',
+            text: '新版',
+        }]
+    }
+}, {
+    isSubMenu: true,
+    subMenu: {
+        title: {
+            linkTo: RouterEnum.memento,
+            Icon: 'container',
+            text: '备忘录模式',
+        },
+        menuItemList: [{
+            linkTo: RouterEnum.oldmemento,
+            Icon: 'fall',
+            text: '旧版',
+        }, {
+            linkTo: RouterEnum.memento,
+            Icon: 'rise',
+            text: '新版',
+        }]
+    }
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.factory,
+    Icon: 'shop',
+    text: '工厂模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.abstractFactory,
+    Icon: 'shop',
+    text: '抽象工厂模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.adapater,
+    Icon: 'api',
+    text: '适配器模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.agency,
+    Icon: 'block',
+    text: '代理模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.template,
+    Icon: 'copy',
+    text: '模板模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.facade,
+    Icon: 'skin',
+    text: '外观/门面模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.builder,
+    Icon: 'scissor',
+    text: '建造者模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.combination,
+    Icon: 'apartment',
+    text: '组合模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.status,
+    Icon: 'alert',
+    text: '状态模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.iterator,
+    Icon: 'retweet',
+    text: '迭代器模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.mediator,
+    Icon: 'smile-o',
+    text: '中介者模式'
+}, {
+    isSubMenu: false,
+    linkTo: RouterEnum.unknown,
+    Icon: 'question',
+    text: '未知'
+}]
+
 class App extends React.Component<IAppProps> {
     state = {
         collapsed: false,
@@ -21,218 +224,46 @@ class App extends React.Component<IAppProps> {
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <div className="logo" />
                     <Menu theme="dark" defaultSelectedKeys={[RouterEnum.simpleFactory]} mode="inline">
-                        <Menu.Item key={RouterEnum.simpleFactory}>
-                            <Link to={RouterEnum.simpleFactory}>
-                                <Icon type="shop" />
-                                <span>简单工厂模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <SubMenu
-                            key={RouterEnum.strategy}
-                            title={
-                                <Link to={RouterEnum.strategy}>
-                                    <Icon type="ordered-list" />
-                                    <span>策略模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="2.1">
-                                <Link to={RouterEnum.strategy + "/old"}>
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="2.2">
-                                <Link to={RouterEnum.strategy}>
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                        <SubMenu
-                            key={RouterEnum.decorator}
-                            title={
-                                <Link to={RouterEnum.decorator}>
-                                    <Icon type="border-outer" />
-                                    <span>装饰模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="3.1">
-                                <Link to={RouterEnum.decorator + "/old"}>
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="3.2">
-                                <Link to={RouterEnum.decorator}>
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                        <Menu.Item key={RouterEnum.prototype}>
-                            <Link to={RouterEnum.prototype}>
-                                <Icon type="import" />
-                                <span>原型模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.singleton}>
-                            <Link to={RouterEnum.singleton}>
-                                <Icon type="minus" />
-                                <span>单例模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.observer}>
-                            <Link to={RouterEnum.observer}>
-                                <Icon type="eye" />
-                                <span>观察者模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <SubMenu
-                            key={RouterEnum.chainOfResponsibility}
-                            title={
-                                <Link to={RouterEnum.chainOfResponsibility}>
-                                    <Icon type="cluster" />
-                                    <span>责任链模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="7.1">
-                                <Link to={RouterEnum.chainOfResponsibility + "/old"}>
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="7.2">
-                                <Link to={RouterEnum.chainOfResponsibility}>
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                        <Menu.Item key={RouterEnum.bridge}>
-                            <Link to={RouterEnum.bridge}>
-                                <Icon type="column-width" />
-                                <span>桥接模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <SubMenu
-                            key={RouterEnum.command}
-                            title={
-                                <Link to={RouterEnum.command}>
-                                    <Icon type="code" />
-                                    <span>命令模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="9.1">
-                                <Link to={RouterEnum.command + "/old"}>
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="9.2">
-                                <Link to={RouterEnum.command}>
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                        <SubMenu
-                            key={RouterEnum.memento}
-                            title={
-                                <Link to={RouterEnum.memento}>
-                                    <Icon type="container" />
-                                    <span>备忘录模式</span>
-                                </Link>
-                            }
-                        >
-                            <Menu.Item key="10.1">
-                                <Link to={RouterEnum.memento + "/old"}>
-                                    <Icon type="fall" />
-                                    <span>旧版</span>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="10.2">
-                                <Link to={RouterEnum.memento}>
-                                    <Icon type="rise" />
-                                    <span>新版</span>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                        <Menu.Item key={RouterEnum.factory}>
-                            <Link to={RouterEnum.factory}>
-                                <Icon type="shop" />
-                                <span>工厂模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.abstractFactory}>
-                            <Link to={RouterEnum.abstractFactory}>
-                                <Icon type="shop" />
-                                <span>抽象工厂模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.adapater}>
-                            <Link to={RouterEnum.adapater}>
-                                <Icon type="api" />
-                                <span>适配器模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.agency}>
-                            <Link to={RouterEnum.agency}>
-                                <Icon type="block" />
-                                <span>代理模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.template}>
-                            <Link to={RouterEnum.template}>
-                                <Icon type="copy" />
-                                <span>模板模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.facade}>
-                            <Link to={RouterEnum.facade}>
-                                <Icon type="skin" />
-                                <span>外观/门面模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.builder}>
-                            <Link to={RouterEnum.builder}>
-                                <Icon type="scissor" />
-                                <span>建造者模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.combination}>
-                            <Link to={RouterEnum.combination}>
-                                <Icon type="apartment" />
-                                <span>组合模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.status}>
-                            <Link to={RouterEnum.status}>
-                                <Icon type="alert" />
-                                <span>状态模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.iterator}>
-                            <Link to={RouterEnum.iterator}>
-                                <Icon type="retweet" />
-                                <span>迭代器模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.mediator}>
-                            <Link to={RouterEnum.mediator}>
-                                <Icon type="smile-o" />
-                                <span>中介者模式</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key={RouterEnum.unknown}>
-                            <Link to={RouterEnum.unknown}>
-                                <Icon type="question" />
-                                <span>未知</span>
-                            </Link>
-                        </Menu.Item>
+                        {
+                            siderMenuList.map((siderItem: ISider) => {
+                                let template = (<></>)
+                                if (siderItem.isSubMenu) {
+                                    template = (
+                                        <SubMenu
+                                            key={siderItem.subMenu!.title.linkTo}
+                                            title={
+                                                <Link to={siderItem.subMenu!.title.linkTo}>
+                                                    <Icon type={siderItem.subMenu!.title.Icon} />
+                                                    <span>{siderItem.subMenu!.title.text}</span>
+                                                </Link>
+                                            }
+                                        >
+                                            {siderItem.subMenu!.menuItemList.map((subSiderItem: IMenuItem) => {
+                                                return (
+                                                    <Menu.Item key={subSiderItem.linkTo}>
+                                                        <Link to={subSiderItem.linkTo}>
+                                                            <Icon type={subSiderItem.Icon} />
+                                                            <span>{subSiderItem.text}</span>
+                                                        </Link>
+                                                    </Menu.Item>
+                                                )
+                                            })}
+                                        </SubMenu>
+                                    )
+                                } else {
+                                    template = (
+                                        <Menu.Item key={siderItem.linkTo}>
+                                            <Link to={siderItem.linkTo || ''}>
+                                                <Icon type={siderItem.Icon} />
+                                                <span>{siderItem.text}</span>
+                                            </Link>
+                                        </Menu.Item>
+                                    )
+                                }
+
+                                return template
+                            })
+                        }
                     </Menu>
                 </Sider>
                 <Layout>
