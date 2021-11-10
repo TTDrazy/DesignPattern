@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2021-11-10 10:14:02
  * @LastEditors: Drazy
- * @LastEditTime: 2021-11-10 15:19:49
+ * @LastEditTime: 2021-11-10 15:37:40
  */
 import * as React from 'react';
 import { IMenuItem, ISider, siderMenuList } from './SiderMenu';
@@ -25,7 +25,7 @@ export default class Home extends React.Component<IHomeProps> {
                   {siderItem.subMenu!.title.text}
                   {siderItem.subMenu!.menuItemList.map((subMenuItem: IMenuItem) => {
                     return (
-                      <ol key={subMenuItem.linkTo}>{subMenuItem.text}</ol>
+                      <ol key={subMenuItem.linkTo}>{subMenuItem.text} --- {subMenuItem.exampleName}</ol>
                     )
                   })}
                 </ul>
