@@ -12,6 +12,7 @@ import WearClothesDecorate from '../components/decorator/decorate/WearClothesDec
 import WearClothesIndex from '../components/decorator/old/WearClothesIndex'
 import FacadeIndex from '../components/facade/FacadeIndex'
 import FactoryIndex from '../components/factory/FactoryIndex'
+import FlyweightIndex from '../components/flyweight/FlyweightIndex'
 import IteratorIndex from '../components/iterator/IteratorIndex'
 import MediatorIndex from '../components/mediator/MediatorIndex'
 import GameIndex from '../components/memento/game/GameIndex'
@@ -187,6 +188,11 @@ const routerList: IRouterList[] = [
     exact: true,
     path: RouterEnum.mediator,
     component: MediatorIndex,
+  },
+  {
+    exact: true,
+    path: RouterEnum.flyweight,
+    component: FlyweightIndex,
   },
   {
     exact: true,

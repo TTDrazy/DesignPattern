@@ -4,7 +4,7 @@ import { RouterEnum } from './router/RouterEnum'
  * @Author: Drazy
  * @Date: 2021-11-10 14:31:44
  * @LastEditors: Drazy
- * @LastEditTime: 2021-11-10 15:36:49
+ * @LastEditTime: 2021-11-12 14:03:22
  */
 export interface IMenuItem {
   linkTo: RouterEnum
@@ -124,7 +124,13 @@ export const siderMenuList: ISider[] = [
           linkTo: RouterEnum.agency,
           Icon: 'block',
           text: '代理模式',
-          exampleName: '追求女生的案例',
+          exampleName: '追求女生案例',
+        },
+        {
+          linkTo: RouterEnum.flyweight,
+          Icon: 'fork',
+          text: '享元模式',
+          exampleName: '网站共享代码案例',
         },
       ],
     },
