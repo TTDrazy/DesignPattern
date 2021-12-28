@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
-import { Link } from "react-router-dom";
+import { Link, RouteComponentProps, withRouter } from "react-router-dom";
 import { RouterEnum } from "./router/RouterEnum";
 import { IMenuItem, ISider, siderMenuList } from "./SiderMenu";
+
 export interface IAppProps { }
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-class App extends React.Component<IAppProps> {
+
+// 为了解决 withRoute 的报错
+class App extends React.Component<RouteComponentProps<IAppProps>> {
     state = {
         collapsed: false,
     };
@@ -17,6 +20,22 @@ class App extends React.Component<IAppProps> {
         this.setState({ collapsed });
     };
 
+    getCurrentPatternName(): string {
+        let patternName = ''
+        if (this.props.location.pathname !== '/') {
+            const pathName = this.props.location.pathname
+            siderMenuList.map((item) => {
+                if (item.isSubMenu) {
+                    item.subMenu!.menuItemList.map((menuItem) => {
+                        if (pathName === menuItem.linkTo) {
+                            patternName = menuItem.text
+                        }
+                    })
+                }
+            })
+        }
+        return patternName
+    }
     public render() {
         return (
             <Layout style={{ minHeight: "100vh" }}>
@@ -79,6 +98,7 @@ class App extends React.Component<IAppProps> {
                     <Content style={{ margin: "0 16px" }}>
                         <Breadcrumb style={{ margin: "16px 0" }}>
                             <Breadcrumb.Item>设计模式案例</Breadcrumb.Item>
+                            <Breadcrumb.Item>{this.getCurrentPatternName()}</Breadcrumb.Item>
                         </Breadcrumb>
                         <div
                             style={{
@@ -97,4 +117,4 @@ class App extends React.Component<IAppProps> {
     }
 }
 
-export default App;
+export default withRouter(App);
