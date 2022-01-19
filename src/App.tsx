@@ -24,7 +24,7 @@ class App extends React.Component<RouteComponentProps<IAppProps>> {
         let patternName = ''
         if (this.props.location.pathname !== '/') {
             const pathName = this.props.location.pathname
-            siderMenuList.map((item) => {
+            siderMenuList.map((item):void => {
                 if (item.isSubMenu) {
                     item.subMenu!.menuItemList.map((menuItem) => {
                         if (pathName === menuItem.linkTo) {
