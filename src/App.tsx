@@ -41,7 +41,7 @@ class App extends React.Component<RouteComponentProps<IAppProps>> {
             <Layout style={{ minHeight: "100vh" }}>
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <div className="logo" />
-                    <Menu theme="dark" defaultSelectedKeys={[RouterEnum.home]} defaultOpenKeys={[RouterEnum.factory, RouterEnum.adapater]} mode="inline">
+                    <Menu theme="dark" defaultSelectedKeys={[RouterEnum.home]} mode="inline">
                         {
                             siderMenuList.map((siderItem: ISider) => {
                                 let template = (<></>)
