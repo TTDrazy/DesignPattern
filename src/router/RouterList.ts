@@ -28,6 +28,7 @@ import TemplateIndex from '../components/template/TemplateIndex'
 import Home from '../Home'
 import { RouterEnum } from './RouterEnum'
 import InterpreterIndex from '../components/interpreter/InterpreterIndex'
+import VisitorIndex from '../components/visitor/VisitorIndex'
 /*
  * @Author: Drazy
  * @Date: 2021-11-10 09:54:01
@@ -199,6 +200,11 @@ const routerList: IRouterList[] = [
     exact: true,
     path: RouterEnum.interpreter,
     component: InterpreterIndex,
+  },
+  {
+    exact: true,
+    path: RouterEnum.visitor,
+    component: VisitorIndex,
   },
 
   {

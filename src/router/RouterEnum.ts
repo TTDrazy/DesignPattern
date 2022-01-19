@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2021-09-02 14:50:29
  * @LastEditors: Drazy
- * @LastEditTime: 2021-12-28 10:14:03
+ * @LastEditTime: 2022-01-19 15:11:28
  */
 export enum RouterEnum {
   // 主页
@@ -59,6 +59,8 @@ export enum RouterEnum {
   flyweight = '/flyweight',
   // 解释器模式
   interpreter = '/interpreter',
+  // 访问者模式
+  visitor = '/visitor',
 
   //未知
   unknown = '/unknown',
