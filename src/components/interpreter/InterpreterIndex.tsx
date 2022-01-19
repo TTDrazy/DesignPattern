@@ -2,7 +2,7 @@
  * @Author: Drazy
  * @Date: 2022-01-04 09:45:32
  * @LastEditors: Drazy
- * @LastEditTime: 2022-01-19 11:24:13
+ * @LastEditTime: 2022-01-19 11:38:26
  */
 import * as React from 'react';
 import Context from './bossHeart/Context';
@@ -59,6 +59,7 @@ export default class InterpreterIndex extends React.Component<IInterpreterIndexP
           case 'A':
           case 'B':
           case 'P':
+            // 以上 C - B 均穿透至此层
             musicExpression = new Note()
             break
           case 'T':
